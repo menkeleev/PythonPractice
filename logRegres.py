@@ -17,3 +17,5 @@ def gradAscent(dataMatIn,classLabels)
     alpha=0.001
     maxCycles=500
     weights=ones((n,1))
+    for k in range(maxCycles):
+        h
