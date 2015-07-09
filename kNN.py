@@ -14,7 +14,7 @@ def classify0(inX,dataSet,labels,k):
     distances=sqDistance**0.5
     sortedDistIndices=distances.argsort()
     classCount={}
-    for i in range(k)
+    for i in range(k):
         voteIlablel=labels[sortedDistanceIndices[i]]
         classCount[voteIlabel]=classCount.get(voteIlabel,0)+1
     sortedClassCount=sorted(classCount.iteritems(),
