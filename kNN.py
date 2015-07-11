@@ -11,11 +11,11 @@ def classify0(inX,dataSet,labels,k):
     diffMat=tile(inX,(dataSetSize,1))-dataSet
     sqDiffMat=diffMat**2
     sqDistances=sqDiffMat.sum(axis=1)
-    distances=sqDistance**0.5
+    distances=sqDistances**0.5
     sortedDistIndices=distances.argsort()
     classCount={}
     for i in range(k):
-        voteIlablel=labels[sortedDistanceIndices[i]]
+        voteIlabel=labels[sortedDistIndices[i]]
         classCount[voteIlabel]=classCount.get(voteIlabel,0)+1
     sortedClassCount=sorted(classCount.iteritems(),
      key=operator.itemgetter(1),reverse=True)
